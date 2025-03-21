@@ -1,0 +1,21 @@
+# Ignore build-related and development files
+node_modules
+dist
+bun.lock
+package-lock.json
+tsconfig.json
+.gitignore
+
+# Ignore test and example files
+example/
+tests/
+__tests__/
+*.test.ts
+*.spec.ts
+
+# Ignore editor and system files
+.vscode/
+.idea/
+*.log
+.DS_Store
+.env
