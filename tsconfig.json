@@ -8,7 +8,6 @@
     "declaration": true,
     "emitDeclarationOnly": false,
     "esModuleInterop": true,
-    "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
     "noEmit": false,
     "strict": true,
