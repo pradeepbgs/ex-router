@@ -33,7 +33,6 @@ async function compile(app: any, prefixUrl: string, dirPath: string, baseRoute: 
     const filePath = path.join(dirPath, file);
     // console.log('file path', filePath)
     const stat = await fs.promises.stat(filePath);
-
     if (stat.isDirectory()) {
       compile(app, prefixUrl, filePath, baseRoute + '/' + file);
     }
@@ -54,7 +53,7 @@ async function registerFileRoutes(
   extension: string
 ) {
   const module = await import(filePath);
-
+  // console.log(filePath)
   let pathRoute;
   if (extension === '.ts') {
     pathRoute = path.basename(filePath, '.ts');
@@ -94,7 +93,7 @@ async function registerFileRoutes(
     if (module[method] && typeof app[method.toLowerCase()] === 'function') {
       const lowerMethod = method;
       app[lowerMethod.toLocaleLowerCase()](`${prefixUrl}${routePath}`, module[method])
-      // console.log(`Registered route ${method} ${path}`)
+      // console.log(`Registered route ${lowerMethod} ${prefixUrl}${routePath}`)
     }
   }
 }

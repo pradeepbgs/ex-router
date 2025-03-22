@@ -1,5 +1,5 @@
 import expess from 'express'
-import {loadRoutes} from '../index.js'
+import {loadRoutes} from '../main'
 
 
 const app = expess()
@@ -7,7 +7,7 @@ const port = 3000
 
 loadRoutes(app,
     {
-        routeDir: process.cwd()  + '/src/routes',
+        routeDir: process.cwd()  + '/example/src/routes',
         prefixUrl: ''
     });
 
