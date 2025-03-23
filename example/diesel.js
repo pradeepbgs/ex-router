@@ -10,7 +10,7 @@ loadRoutes(app,
         routeDir: process.cwd()  + '/src/routes',
         prefixUrl: ''
     })
-app.get('/', (c) => c.text('Hono!'))
+app.get('/', (c) => c.text('Diesel!'))
 
 
 app.listen(3000)

@@ -1,16 +1,17 @@
 {
   "name": "ex-router",
-  "version": "1.6.0",
+  "version": "1.8.0",
   "description": "A lightweight, automatic file-based routing, inspired by Next.js-style dynamic routes.",
   "module": "dist/main.js",
-  "main": "index.js",
+  "main": "dist/main",
   "type": "module",
   "exports": {
-    "import": "./index.js",
-    "require": "./index.cjs"
+    "import": "./dist/main.js",
+    "require": "./dist/main.js"
   },
   "files": [
-    "dist"
+    "dist",
+   "index.d.ts"
   ],
   "keywords": [
     "next",
