@@ -1,5 +1,5 @@
 import fastify from "fastify";
-import {loadRoutes} from '../index.js'
+import { loadRoutes } from '../index.js'
 
 
 const app = new fastify()
@@ -10,14 +10,14 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
+setTimeout(() => {
+    loadRoutes(app,
+        {
+            routeDir: process.cwd() + '/src/routes',
+            prefixUrl: ''
+        })
+}, 100);
 
-
-loadRoutes(app,
-    {
-        routeDir: process.cwd()  + '/src/routes',
-        prefixUrl: ''
-    })
-    
 app.listen({ port: 3000 }, (err, address) => {
     if (err) {
         console.error(err)

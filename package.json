@@ -1,6 +1,6 @@
 {
   "name": "ex-router",
-  "version": "1.1.0",
+  "version": "1.6.0",
   "description": "A lightweight, automatic file-based routing, inspired by Next.js-style dynamic routes.",
   "module": "dist/main.js",
   "main": "index.js",
@@ -9,7 +9,30 @@
     "import": "./index.js",
     "require": "./index.cjs"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "next",
+    "file-router",
+    "ex-router",
+    "router",
+    "route",
+    "routing",
+    "dynamic",
+    "dynamic-route",
+    "dynamic-routing",
+    "express-router",
+    "express",
+    "express-routing"
+  ],
+  "author": "Pradeep Kumar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pradeepbgs/ex-router"
+  },
+  
   "private": false,
   "devDependencies": {
     "@types/node": "^18",

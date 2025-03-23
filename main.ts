@@ -1,3 +1,15 @@
+/**
+ * ex-router
+ * 
+ * @license MIT
+ * (c) 2025 Pradeep Kumar
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction...
+ */
+
+
 import fs from 'fs'
 import path from 'path'
 
@@ -29,9 +41,7 @@ async function compile(app: any, prefixUrl: string, dirPath: string, baseRoute: 
   const files = await fs.promises.readdir(dirPath);
 
   for (const file of files) {
-    // console.log('does file exist?', file)
     const filePath = path.join(dirPath, file);
-    // console.log('file path', filePath)
     const stat = await fs.promises.stat(filePath);
     if (stat.isDirectory()) {
       compile(app, prefixUrl, filePath, baseRoute + '/' + file);
@@ -53,7 +63,6 @@ async function registerFileRoutes(
   extension: string
 ) {
   const module = await import(filePath);
-  // console.log(filePath)
   let pathRoute;
   if (extension === '.ts') {
     pathRoute = path.basename(filePath, '.ts');
