@@ -1,9 +1,10 @@
 import expess from 'express'
-import {loadRoutes} from '../index.js'
+import {loadRoutes} from '../dist/main.js'
 
 
 const app = expess()
 const port = 3000
+
 
 loadRoutes(app,
     {

@@ -1,3 +1,8 @@
+[![NPM Version](https://img.shields.io/npm/v/ex-router)](https://www.npmjs.com/package/ex-router)
+[![Downloads](https://img.shields.io/npm/dm/@nativecn/cli.svg)](https://www.npmjs.com/package/ex-router)
+[![License](https://img.shields.io/npm/l/ex-router)](https://github.com/pradeepbgs/ex-router/LICENSE)
+
+
 # ex-router
 
 A lightweight and flexible file-based routing system for **Express.js, Hono, Diesel**, or any other framework.
@@ -9,30 +14,9 @@ A lightweight and flexible file-based routing system for **Express.js, Hono, Die
 - Supports defining multiple HTTP methods in a single route file
 
 > **Note:** Fastify requires a workaround using `setTimeout` (100-200ms) to prevent errors.
+* Wrap loadRoutes func under setTimeout and give time from 100ms or more until it works.
+* Or you can use `fastify-autoload` which is native fastify library
 
->**Fastify**
-```js
-import fastify from "fastify";
-import { loadRoutes } from 'ex-router'
-
-const app = new fastify()
-
-setTimeout(() => {
-    loadRoutes(app,
-        {
-            routeDir: process.cwd() + '/src/routes',
-            prefixUrl: ''
-        })
-}, 100);
-
-app.listen({ port: 3000 }, (err, address) => {
-    if (err) {
-        console.error(err)
-        process.exit(1)
-    }
-    console.log(`Server listening at ${address}`)
-})
-```
 
 ## 📦 Installation
 

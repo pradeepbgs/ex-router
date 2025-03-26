@@ -102,7 +102,6 @@ async function registerFileRoutes(
     if (module[method] && typeof app[method.toLowerCase()] === 'function') {
       const lowerMethod = method;
       app[lowerMethod.toLocaleLowerCase()](`${prefixUrl}${routePath}`, module[method])
-      // console.log(`Registered route ${lowerMethod} ${prefixUrl}${routePath}`)
     }
   }
 }
