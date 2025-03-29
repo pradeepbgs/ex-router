@@ -24,6 +24,7 @@ async function loadRoutes(
   }
 
 ) {
+  
   if (!app) {
     throw new Error('App is not defined')
   }
@@ -97,7 +98,6 @@ async function registerFileRoutes(
     'ALL', 'USE', // express
     'TRACE', 'CONNECT' // fastify
   ];
-
   for (const method of supportedMethods) {
     if (module[method] && typeof app[method.toLowerCase()] === 'function') {
       const lowerMethod = method;

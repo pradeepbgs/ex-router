@@ -1,5 +1,5 @@
 import expess from 'express'
-import {loadRoutes} from '../dist/main.js'
+import {loadRoutes} from '../main'
 
 
 const app = expess()

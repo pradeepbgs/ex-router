@@ -1,5 +1,5 @@
 import { Diesel } from "diesel-core";
-import {loadRoutes} from '../index'
+import {loadRoutes} from '../main'
 
 
 const app = new Diesel();

@@ -153,3 +153,9 @@ Contributions are welcome! Feel free to submit issues or pull requests.
 ## 📜 License
 This project is licensed under the **MIT License**.
 
+<div align="center">
+  <p>If you find this project helpful, consider buying me a coffee ☕</p>
+  <a href="https://buymeacoffee.com/pradeepsahu">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60" />
+  </a>
+</div>
